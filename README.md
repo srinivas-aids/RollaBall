@@ -1,7 +1,7 @@
 # RollaBall
 
-## Aim:
-To develop a 3D program for roll a ball in unity
+## Aim: To Roll a Ball using C# program in unity .
+
 ## Algorithm:
 
 1. File -> Scene -> Select the scene -> Save as-> New folder(Scenes)-> File name (MiniGame)
@@ -43,17 +43,16 @@ Copy the PlayerController and drag to Script folder
 Double click the PlayerController file and type the coding
 
 ## Program:
-```
+~~~
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Object1 : MonoBehaviour
+public class balls : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public float xmove = 7.0f;
-    public float zmove = 5.0f;
-    public float ymove = 150.0f;
+    float XForce = 5.0f;
+    float zForce = 20.0f;
+    float yForce = 10.0f;
     void Start()
     {
         
@@ -62,36 +61,33 @@ public class Object1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float x = 0.0f;
-        if(Input.GetKey(KeyCode.UpArrow))
+        float x = 0.0f, y = 0.0f, z = 0.0f;
+        if(Input.GetKey(KeyCode.A))
         {
-            x += xmove;
+            x = x - XForce;
         }
-        if(Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.D))
         {
-            x -= xmove;
+            x = x + XForce;
         }
-        float z = 0.0f;
-        if(Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.W))
         {
-            z -= zmove;
+            z = z - zForce;
         }
-        if(Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.S))
         {
-            z += zmove;
+            z = z + zForce;
         }
-        float y = 0.0f;
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
-            y = ymove;
+            y = yForce;
         }
         GetComponent<Rigidbody>().AddForce(x, y, z);
     }
 }
-```
+~~~
+
 ## Output:
-
-![ex-1](https://github.com/swemurali/RollaBall/assets/94165336/9fa1d9f1-734c-484a-9db3-1a47d88eefbd)
-
+![OP](1.png)
 ## Result:
-Thus, the 3D application for Roll the Ball objects in unity is developed successfully.
+Thus, The 3D application for Roll the Ball objects in unity is developed successfully.
