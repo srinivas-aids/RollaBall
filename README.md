@@ -88,6 +88,7 @@ public class balls : MonoBehaviour
 ~~~
 
 ## Output:
-![OP](1.png)
+![image](https://github.com/srinivas-aids/RollaBall/assets/93427183/4eb9c4b3-4c95-4672-9b18-c2f8962c3e7f)
+
 ## Result:
 Thus, The 3D application for Roll the Ball objects in unity is developed successfully.
